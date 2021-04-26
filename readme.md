@@ -113,3 +113,57 @@ kubectl describe pods <pod_name>
     <image src="https://user-images.githubusercontent.com/8760590/116152965-d6e2cd00-a6a3-11eb-91b5-68ef16350bc2.png" width="450">
 </p>  
 
+## Labs 
+
+### Lab 1: Pods
+- [ ] Steps 
+1. Create a dir and a yaml file
+
+```
+mkdir pods
+cd pods
+code pod-def.yaml
+```
+
+2. Create the yaml manifest to deploy a redis and nginx image to this pod
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: myapp-pod
+  labels: 
+    app: myapp
+spec: 
+  containers: 
+    - name: nginx-container
+      image: nginx:latest
+    
+    - name: backend-container
+      image: redis:latest
+```
+
+3. Go to CLI, navigate to the pods directory and and deploy this configuration 
+
+```
+kubectl create -f pod-def.yaml
+```
+
+4. See deployed pod
+
+```
+kubectl get pods
+```
+
+5. See the deployment details of the pod to the node
+
+```
+kubectl describe pod myapp-pod
+```   
+
+6. See running containers within the pod
+
+```
+docker ps
+```
+--------
