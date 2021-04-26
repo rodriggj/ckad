@@ -3,6 +3,7 @@
 ## Topics
 - [ ] Vocabulary
 - [ ] Architecture
+- [ ] Pods
 
 ### Vocabulary
 - [ ] `Node` is a machine, physical or virtual on which Kubernetes is installed. A `node` is a worker machine on which containers will be launched by Kubernetes. (aka `minion`). A node is where application contianers are deployed. 
@@ -39,10 +40,76 @@
 - [ ] `controller`: The controllers are the brains in K8. They are responsible for noticiting and responding when nodes, container endpoints go down. The controllers make decisions to bring up new containers in such cases. 
 - [ ] `scheduler`: Is responsible for distributing work or containers across multiple nodes. It looks for newly created containers and assigns them to nodes. 
 
-### Master vs. Worker Nodes
+#### Master vs. Worker Nodes
 Realize the both `Master` and `Workers` are `Nodes` in kubernetes; the difference between the two is thier configuration.
 
 <p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116146724-0b528b00-a69c-11eb-8826-0f96d09375a9.png" width="450">
 </p>
 
+
+#### `kubectl`
+
+- [ ] CLI tool
+
+```javascript
+kubectl run hello-minikube
+kubectl cluster-info
+kubectl get nodes
+```
+
+### PODs 
+- [ ] K8 does not deploy containers directly to a worker Node. Instead it encapsulates the container in a K8 object known as a `pod`.
+- [ ] A pod is an instance of your application
+- [ ] A pod is the smallest object that you can create on K8
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116151575-0395e500-a6a2-11eb-839b-f06b36129c97.png" width="450">
+</p>
+
+#### Scaling PODs
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116151887-6edfb700-a6a2-11eb-948c-194d28f41da8.png" width="450">
+</p>
+
+#### Multi-Contanier Pods
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152009-9afb3800-a6a2-11eb-8f6f-0a2f09d605b4.png" width="450">
+</p>
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152152-ca11a980-a6a2-11eb-85b6-c3d86c44d054.png" width="450">
+</p>
+
+#### `kubectl run ...` command
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152152-ca11a980-a6a2-11eb-85b6-c3d86c44d054.png" width="450">
+</p>
+
+### YAML
+
+- [ ] K8 objects are constructed using a YAML or JSON file format. You will have a file for each K8 Object you intend to use within your application deployment (e.g. Pod, Service, Deployment, etc). All YAML files are constructed with the same 4 `root` attributes, shown here. At minimum, these 4 elements _must_ be specified in your `manifest` file. 
+- [ ] For the first & secondattributes, `apiVersion` & `kind` these are specified in the K8 documentation and are represented in the table below. 
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152649-69cf3780-a6a3-11eb-8595-fb265a956dfd.png" width="450">
+</p>
+
+
+- [ ] Note that the data structure within the YAML files.
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152698-781d5380-a6a3-11eb-8ac3-e75a804badb5.png" width="450">
+</p>
+
+|   |   |   |
+|---|---|---|
+| <p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152649-69cf3780-a6a3-11eb-8595-fb265a956dfd.png" width="450">
+</p>  | <p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152883-ba469500-a6a3-11eb-8458-8313b57189b7.png" width="450">
+</p>  | </p>  | <p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116152965-d6e2cd00-a6a3-11eb-91b5-68ef16350bc2.png" width="450">
+</p>   | 
