@@ -32,9 +32,9 @@
     <image src="https://user-images.githubusercontent.com/8760590/116098668-7da97800-a668-11eb-9007-56cee9fd656a.png" width="450">
 </p>
 
-- [ ] _API Server_: Acts as the front-end for Kubernetes, the users, management devices, command line interfaces all talk to the API server to interact with the K8 cluster. 
-- [ ] _etcd_: ETCD is a distributed reliable key/value store used by K8 to store all data used to manage the cluser. When you have multiple nodes and multiple masters in your cluster ETCD stores all that information on all the nodes in the cluster ina a distributed manner. ETCD is responsible for implementing `locks` within the cluster to ensure there are no conflicts between the `Masters`.
-- [ ] _kubelet_: Agent running on each node communicating with the `master`.
-- [ ] _Container Runtime_: The container runtime is the software running the containers, which can be `Docker`, `containerd`, etc.
-- [ ] _Controller_: The controllers are the brains in K8. They are responsible for noticiting and responding when nodes, container endpoints go down. The controllers make decisions to bring up new containers in such cases. 
-- [ ] _Scheduler_: Is responsible for distributing work or containers across multiple nodes. It looks for newly created containers and assigns them to nodes. 
+- [ ] `API Server`: Acts as the front-end for Kubernetes, the users, management devices, command line interfaces all talk to the API server to interact with the K8 cluster. 
+- [ ] `etcd`: ETCD is a distributed reliable key/value store used by K8 to store all data used to manage the cluser. When you have multiple nodes and multiple masters in your cluster ETCD stores all that information on all the nodes in the cluster ina a distributed manner. ETCD is responsible for implementing `locks` within the cluster to ensure there are no conflicts between the `Masters`.
+- [ ] `kublet`: Agent running on each node communicating with the `master`.
+- [ ] `container runtime`: The container runtime is the software running the containers, which can be `Docker`, `containerD`, etc.
+- [ ] `controller`: The controllers are the brains in K8. They are responsible for noticiting and responding when nodes, container endpoints go down. The controllers make decisions to bring up new containers in such cases. 
+- [ ] `scheduler`: Is responsible for distributing work or containers across multiple nodes. It looks for newly created containers and assigns them to nodes. 
