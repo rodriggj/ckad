@@ -56,6 +56,7 @@ Realize the both `Master` and `Workers` are `Nodes` in kubernetes; the differenc
 kubectl run hello-minikube
 kubectl cluster-info
 kubectl get nodes
+kubectl describe pods <pod_name>
 ```
 
 ### PODs 
@@ -107,7 +108,8 @@ kubectl get nodes
  <p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116152883-ba469500-a6a3-11eb-8458-8313b57189b7.png" width="450">
 </p>   
- 
+
 <p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116152965-d6e2cd00-a6a3-11eb-91b5-68ef16350bc2.png" width="450">
-</p>   | 
+</p>  
+
