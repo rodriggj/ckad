@@ -38,3 +38,11 @@
 - [ ] `container runtime`: The container runtime is the software running the containers, which can be `Docker`, `containerD`, etc.
 - [ ] `controller`: The controllers are the brains in K8. They are responsible for noticiting and responding when nodes, container endpoints go down. The controllers make decisions to bring up new containers in such cases. 
 - [ ] `scheduler`: Is responsible for distributing work or containers across multiple nodes. It looks for newly created containers and assigns them to nodes. 
+
+### Master vs. Worker Nodes
+Realize the both `Master` and `Workers` are `Nodes` in kubernetes; the difference between the two is thier configuration.
+
+<p align="center">
+    <image src="https://user-images.githubusercontent.com/8760590/116146724-0b528b00-a69c-11eb-8826-0f96d09375a9.png" width="450">
+</p>
+
