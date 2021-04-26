@@ -104,12 +104,12 @@ kubectl get nodes
     <image src="https://user-images.githubusercontent.com/8760590/116152698-781d5380-a6a3-11eb-8ac3-e75a804badb5.png" width="450">
 </p>
 
-|                                   |   |   |
-|-----------------------------------|---|---|
-| <p align="center">
+<p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116152649-69cf3780-a6a3-11eb-8595-fb265a956dfd.png" width="150">
-</p>   | <p align="center">
+</p>   
+ <p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116152883-ba469500-a6a3-11eb-8458-8313b57189b7.png" width="150">
-</p>   |  <p align="center">
+</p>    
+<p align="center">
     <image src="https://user-images.githubusercontent.com/8760590/116152965-d6e2cd00-a6a3-11eb-91b5-68ef16350bc2.png" width="150">
 </p>   | 
